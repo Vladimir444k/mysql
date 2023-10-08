@@ -10,11 +10,11 @@ public class VerificationPage {
     private final SelenideElement verifyButton = $("[data-test-id=action-verify]");
     private final SelenideElement errorNotification = $("[data-test-id='error-notification']");
 
-    public void verifyVerificationPageVis() {
+    public void verifyVerificationPageVisiblity() {
         codeField.shouldBe(visible);
     }
 
-    public void verifyErrorNotificationVis() {
+    public void verifyErrorNotificationVisiblity() {
         errorNotification.shouldBe(visible);
     }
 

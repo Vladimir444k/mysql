@@ -23,10 +23,10 @@ public class BankLoginTest {
     @Test
     @DisplayName("Should successfully login to dashboard with exits login and password from sut test data")
     void testSuccessfulLogin() {
-        var loginPage = open("http://localhost:9999",LoginPage.class);
+        var loginPage = open("http://localhost:9999", LoginPage.class);
         var authInfo = DataHelper.getAuthInfoWithTestData();
         var verificationPage = loginPage.validLogin(authInfo);
-        verificationPage.verifyVerificationPageVis();
+        verificationPage.verifyVerificationPageVisiblity();
         var verificationCode = SQLHelper.getVerificationCode();
         verificationPage.validVerify(verificationCode.getCode());
     }
@@ -46,9 +46,9 @@ public class BankLoginTest {
         var loginPage = open("http://localhost:9999", LoginPage.class);
         var authInfo = DataHelper.getAuthInfoWithTestData();
         var verificationPage = loginPage.validLogin(authInfo);
-        verificationPage.verifyVerificationPageVis();
+        verificationPage.verifyVerificationPageVisiblity();
         var verificationCode = DataHelper.generateRandomVerificationCode();
         verificationPage.verify(verificationCode.getCode());
-        verificationPage.verifyErrorNotificationVis();
+        verificationPage.verifyErrorNotificationVisiblity();
     }
 }
