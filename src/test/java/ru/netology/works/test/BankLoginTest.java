@@ -5,11 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.netology.works.data.DataHelper;
 import ru.netology.works.data.SQLHelper;
-import ru.netology.works.page.DashboardPage;
 import ru.netology.works.page.LoginPage;
-
-
-import javax.xml.crypto.Data;
 
 import static com.codeborne.selenide.Selenide.open;
 import static ru.netology.works.data.SQLHelper.cleanDatabase;
